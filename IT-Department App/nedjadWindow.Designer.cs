@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(workSozWindow));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.techBase = new System.Windows.Forms.DataGridView();
             this.priceLabel = new System.Windows.Forms.Label();
             this.radioButton101 = new System.Windows.Forms.RadioButton();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
@@ -47,17 +47,17 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techBase)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // techBase
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 201);
-            this.dataGridView1.TabIndex = 1;
+            this.techBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.techBase.Location = new System.Drawing.Point(12, 36);
+            this.techBase.Name = "techBase";
+            this.techBase.RowTemplate.Height = 25;
+            this.techBase.Size = new System.Drawing.Size(776, 201);
+            this.techBase.TabIndex = 1;
             // 
             // priceLabel
             // 
@@ -238,18 +238,18 @@
             this.Controls.Add(this.radioButton21);
             this.Controls.Add(this.radioButton101);
             this.Controls.Add(this.priceLabel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.techBase);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "workSozWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рабочая область:  Мешанович Н.М.";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.techBase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DataGridView dataGridView1;
         private Label priceLabel;
         private RadioButton radioButton101;
         private RadioButton radioButton21;
@@ -267,5 +267,6 @@
         private TextBox textBox5;
         private Button button1;
         private Button button2;
+        private DataGridView techBase;
     }
 }

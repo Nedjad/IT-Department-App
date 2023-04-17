@@ -7,16 +7,8 @@ namespace IT_Department_App
 {
     class AuthWithDB
     {
-        authWindows authw = new authWindows();
-
-        public void authWithDb()
+        public void authWithDb(string login, string password)
         {         
-            string login = authw.loginBox.Text.Trim();
-            string password = authw.passBox.Text.Trim();
-
-            //var login2 = "Nedjad";
-            //var pass2 = "sch2114";
-
             NpgsqlConnectionStringBuilder build = new NpgsqlConnectionStringBuilder
             {
                 Host = "localhost",
@@ -31,7 +23,6 @@ namespace IT_Department_App
                 try
                 {
                     ccon.Open();
-                    MessageBox.Show("Connection is successful!");
 
                     var conString = "SELECT COUNT(*) FROM admin.users WHERE user_login = @login AND user_pass = @password";
 
@@ -43,11 +34,12 @@ namespace IT_Department_App
                         try
                         {
                             var count = Convert.ToInt32(cmd.ExecuteScalar());
-                            MessageBox.Show(count.ToString());
 
                             if (count > 0)
                             {
-
+                                workSozWindow workSozWindow = new workSozWindow();
+                                workSozWindow.Show();
+                                
                             }
                         }
                         catch (Exception ex)
